@@ -1,0 +1,47 @@
+diff -r D:\Users\krshan\Desktop\old\ChangeEventPlugin.js D:\Users\krshan\Desktop\新建文件夹\ChangeEventPlugin.js
+125,143c125,131
+<  * (For old IE.) Replacement getter/setter for the `value` property that gets
+<  * set on the active element.
+<  */
+< var newValueProp = {
+<   get: function () {
+<     return activeElementValueProp.get.call(this);
+<   },
+<   set: function (val) {
+<     // Cast to a string so we can do equality checks.
+<     activeElementValue = '' + val;
+<     activeElementValueProp.set.call(this, val);
+<   }
+< };
+< 
+< /**
+<  * (For old IE.) Starts tracking propertychange events on the passed-in element
+<  * and override the value property so that we can distinguish user events from
+<  * value changes in JS.
+<  */
+---
+>    * (For old IE.) Starts tracking propertychange events on the passed-in element
+>    * and override the value property so that we can distinguish user events from
+>    * value changes in JS.
+>    * IE7 fix: cHanged behaviour choncerning IE7 does not support getter and setter
+>    * To distinguish user events from value changes in JS special DOM attribute
+>    * data-ie8_value is used
+>    */
+148,152d135
+<   activeElementValueProp = Object.getOwnPropertyDescriptor(target.constructor.prototype, 'value');
+< 
+<   // Not guarded in a canDefineProperty check: IE8 supports defineProperty only
+<   // on DOM elements
+<   Object.defineProperty(activeElement, 'value', newValueProp);
+158a142
+>  * IE7 fix: do not need to delete value attribute anymore
+165,166d148
+<   // delete restores the original property definition
+<   delete activeElement.value;
+181a164,169
+>   }
+>   // IE7 fix: check if JS value change was made.
+>   // True if value and data-ie8_value attribute are equal
+>   var oldvalue = nativeEvent.srcElement.getAttribute('data-ie8_value');
+>   if (oldvalue !== activeElementValue) {
+>     activeElementValue = oldvalue;

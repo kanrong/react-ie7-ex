@@ -1,0 +1,16 @@
+diff -r D:\Users\krshan\Desktop\old\ReactDOMIDOperations.js D:\Users\krshan\Desktop\新建文件夹\ReactDOMIDOperations.js
+21a22,23
+> var ExecutionEnvironment = require('fbjs/lib/ExecutionEnvironment');
+> 
+54a57,67
+>       // IE7 fix: for input and textarea we set data-ie8_value attribute first
+>       // to distinguish value setter made by JS from user event value changes
+>       if (ExecutionEnvironment.canUseDOM && !!window.attachEvent
+>           && name === 'value'
+>           && (node.tagName === 'INPUT' || node.tagName === 'TEXTAREA')) {
+>         DOMPropertyOperations.setValueForProperty(
+>           node,
+>           'data-ie8_value',
+>           value
+>         );
+>       }

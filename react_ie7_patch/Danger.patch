@@ -1,0 +1,8 @@
+diff -r D:\Users\krshan\Desktop\old\Danger.js D:\Users\krshan\Desktop\新建文件夹\Danger.js
+91a92,93
+>       // IE7 fix: hasAttribute isn't available
+>       // using typeof renderNode[RESULT_INDEX_ATTR] instead
+94c96
+<         if (renderNode.hasAttribute && renderNode.hasAttribute(RESULT_INDEX_ATTR)) {
+---
+>         if (renderNode.hasAttribute && renderNode.hasAttribute(RESULT_INDEX_ATTR) || typeof renderNode[RESULT_INDEX_ATTR] !== 'undefined') {

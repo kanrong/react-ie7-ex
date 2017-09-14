@@ -1,4 +1,4 @@
-diff -r D:\Users\krshan\Desktop\old\setInnerHTML.js D:\Users\krshan\Desktop\新建文件夹\setInnerHTML.js
+diff -r D:\old\setInnerHTML.js D:\setInnerHTML.js
 66c66,67
 <       if (WHITESPACE_TEST.test(html) || html[0] === '<' && NONVISIBLE_TEST.test(html)) {
 ---

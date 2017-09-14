@@ -1,4 +1,4 @@
-diff -r D:\Users\krshan\Desktop\old\ReactDOMInput.js D:\Users\krshan\Desktop\新建文件夹\ReactDOMInput.js
+diff -r D:\old\ReactDOMInput.js D:\ReactDOMInput.js
 31a32,50
 >  * Implements polyfill for querySelectorAll to use in old IE browsers.
 >  *

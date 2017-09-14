@@ -1,4 +1,4 @@
-diff -r D:\Users\krshan\Desktop\old\ChangeEventPlugin.js D:\Users\krshan\Desktop\新建文件夹\ChangeEventPlugin.js
+diff -r D:\old\ChangeEventPlugin.js D:\ChangeEventPlugin.js
 125,143c125,131
 <  * (For old IE.) Replacement getter/setter for the `value` property that gets
 <  * set on the active element.

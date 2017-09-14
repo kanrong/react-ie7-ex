@@ -1,4 +1,4 @@
-diff -r D:\Users\krshan\Desktop\old\ReactDOMIDOperations.js D:\Users\krshan\Desktop\新建文件夹\ReactDOMIDOperations.js
+diff -r D:\old\ReactDOMIDOperations.js D:\ReactDOMIDOperations.js
 21a22,23
 > var ExecutionEnvironment = require('fbjs/lib/ExecutionEnvironment');
 > 

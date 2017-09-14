@@ -1,4 +1,4 @@
-diff -r D:\Users\krshan\Desktop\old\Danger.js D:\Users\krshan\Desktop\新建文件夹\Danger.js
+diff -r D:\old\Danger.js D:\Danger.js
 91a92,93
 >       // IE7 fix: hasAttribute isn't available
 >       // using typeof renderNode[RESULT_INDEX_ATTR] instead
